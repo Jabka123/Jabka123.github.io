@@ -1,0 +1,97 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" 
+content="text/html; charset=windows-1251"> 
+<title>Стили</title> 
+<style> p {background-color: #fff; 
+margin: 20px auto; 
+font-family: Arial; 
+font-size: 2em; 
+text-transform: uppercase; 
+color: rgba(0,168,255,0.5); 
+text-shadow: 8px 8px 0 rgba(255,0,180,0.5);} 
+</style> 
+<script> 
+function er(){ 
+var a =Number(document.getElementById("var_in").value); 
+var b = a; 
+a=a*a; 
+a=a*a; 
+document.getElementById("inf1").innerHTML ="<p>"+"a^4="+a+"</p>" ; 
+a=b; 
+a=a*a*a; 
+a=a*a; 
+document.getElementById("inf2").innerHTML ="<p>"+"a^6="+a+"</p>" ; 
+a=b 
+a=a*a*a 
+a=a*a*b 
+document.getElementById("inf3").innerHTML ="<p>"+"a^7="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a 
+a=a*a 
+document.getElementById("inf4").innerHTML ="<p>"+"a^8="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a 
+a=a*a*b 
+document.getElementById("inf5").innerHTML ="<p>"+"a^9="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a*b 
+a=a*a 
+document.getElementById("inf6").innerHTML ="<p>"+"a^10="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a*a 
+a=a*a*b 
+document.getElementById("inf7").innerHTML ="<p>"+"a^13="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a*b 
+a=a*a*a 
+document.getElementById("inf8").innerHTML ="<p>"+"a^15="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*b 
+a=a*a*b 
+a=a*a*a 
+document.getElementById("inf9").innerHTML ="<p>"+"a^21="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a*a*b 
+a=a*a 
+a=a*a 
+document.getElementById("inf10").innerHTML ="<p>"+"a^28="+a+"</p>"; 
+a=b 
+a=a*a 
+a=a*a 
+a=a*a 
+a=a*a 
+a=a*a 
+a=a*a 
+document.getElementById("inf11").innerHTML ="<p>"+"a^64="+a+"</p>"; 
+} 
+</script> 
+</head> 
+<body> 
+<button onclick="er()">1.61</button> 
+<br> 
+<br> 
+a=)<input type="text" value="" id="var_in"> 
+<br> 
+<br> 
+
+<div id="inf1"></div> 
+<div id="inf2"></div> 
+<div id="inf3"></div> 
+<div id="inf4"></div> 
+<div id="inf5"></div> 
+<div id="inf6"></div> 
+<div id="inf7"></div> 
+<div id="inf8"></div> 
+<div id="inf9"></div> 
+<div id="inf10"></div> 
+<div id="inf11"></div> 
+</body> 
+</html>
