@@ -1,0 +1,174 @@
+<html> 
+
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"> 
+<title>Стили</title> 
+<style> 
+@font-face { 
+font-family: "Fairy"; 
+src: url(https://Jabka123.github.io/4717.ttf); 
+} 
+
+body { 
+display: inline-block;
+
+      flex-wrap: wrap;
+
+      align-content: space-between;
+
+      overflow: hidden;
+
+     background-image: url('image.png');
+} 
+
+.gradient { 
+text-align: left; 
+font-size: 32px; 
+font-family: Fairy; 
+letter-spacing: 5px; 
+} 
+
+spotlight {
+
+      background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+
+      -webkit-background-clip: text;
+
+      background-clip: text;
+
+      color: transparent;
+
+      animation: rainbow_animation 6s ease-in-out infinite;
+
+      background-size: 400% 100%;
+
+    }
+
+@keyframes rainbow_animation { 
+0%, 100% { 
+background-position: 0 0; 
+} 
+50% { 
+background-position: 100% 0; 
+} 
+} 
+
+a.button8 { 
+display: inline-block; 
+padding: 0.2em 1.45em; 
+margin: 0.1em; 
+border: 0.15em solid #CCCCCC; 
+box-sizing: border-box; 
+text-decoration: none; 
+font-family: 'Fairy'; 
+font-weight: 400; 
+color: #000000; 
+background-color: #CCCCCC; 
+text-align: center; 
+position: relative; 
+} 
+
+a.button8:hover { 
+border-color: #7a7a7a; 
+position: relative; 
+} 
+
+a.button8:active { 
+background-color: #999999; 
+position: relative; 
+} 
+
+@media all and (max-width:30em) { 
+a.button8 { 
+display: block; 
+margin: 0.2em auto; 
+} 
+.layer1 { 
+position: fixed; 
+} 
+} 
+</style> 
+<script> 
+function er() { 
+var ab = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "десятков " + (ab - ab % 10) / 10 + "<br>единиц " + ab % 10 + 
+"<br>их сумма=" + (ab % 10 + (ab - ab % 10) / 10) 
++ "<br>их произведение=" + (ab % 10 * (ab - ab % 10) / 10); 
+} 
+function er1() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "единиц " + (abc % 10) + "<br>десятков " + ((abc - abc % 10) % 100/10) + 
+"<br>их сумма=" + (abc % 10 + (abc - abc % 100)/100 + (abc - abc % 10) % 100/10) + 
+"<br>их произведение=" + ((abc % 10)* ((abc - abc % 100)/100) *((abc - abc % 10) % 100/10)); 
+} 
+function er2() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "наоборот " + ((abc % 10)*10 + (abc - abc % 10) % 100/10) 
++ (abc - abc % 100)/100 
+} 
+function er3() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "с первой цифрой в конце " + 
+((abc - abc % 10) % 100/10) + (abc % 10) + (abc - abc % 100)/100 
+} 
+function er4() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "с последней цифрой в начале " + (abc % 10) + (abc - abc % 100)/100 + 
+((abc - abc % 10) % 100/10) 
+} 
+function er5() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "1-е и 2-е наоборот " + 
+((abc - abc % 10) % 100/10) + (abc - abc % 100)/100 + (abc % 10) 
+} 
+function er6() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "2-е и 3-е наоборот " 
++ (abc - abc % 100)/100 + 
+(abc % 10) + ((abc - abc % 10) % 100/10) 
+} 
+function er7() { 
+var abc = Number(document.getElementById("var_in").value); 
+document.getElementById("inf1").innerHTML =""; 
+document.getElementById("inf1").innerHTML = "1-е число " + 
++ (abc - abc % 100)/100 + 
+(abc % 10) + ((abc - abc % 10) % 100/10) + 
+"<br> 2-е число " + 
+((abc - abc % 10) % 100/10) + (abc - abc % 100)/100 + (abc % 10) + 
+"<br> 3-е число " + (abc % 10) + (abc - abc % 100)/100 + 
+((abc - abc % 10) % 100/10) + 
+"<br> 4-е число " + 
+((abc - abc % 10) % 100/10) + (abc % 10) + (abc - abc
+% 100)/100 + 
+"<br> 5-е число " + ((abc % 10)*10 + (abc - abc % 10) % 100/10) 
++ (abc - abc % 100)/100 + 
+"<br> 6-е число " + abc 
+} 
+</script> 
+</head> 
+
+<body> 
+<a class="button8" onclick="er()">2.10</a> 
+<a class="button8" onclick="er1()">2.12</a> 
+<a class="button8" onclick="er2()">2.13</a> 
+<a class="button8" onclick="er3()">2.14</a> 
+<a class="button8" onclick="er4()">2.15</a> 
+<a class="button8" onclick="er5()">2.16</a> 
+<a class="button8" onclick="er6()">2.17</a> 
+<a class="button8" onclick="er7()">2.18</a> 
+<div class="layer1"> 
+<input type="text" value="123" id="var_in"> 
+<br> 
+</div> 
+<div class="gradient"> 
+<div class="spotlight" data-text="" id="inf1"></div> 
+</div> 
+
+</body> 
