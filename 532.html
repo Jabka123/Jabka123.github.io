@@ -1,0 +1,136 @@
+!DOCTYPE html> 
+<html> 
+
+<head> 
+<style> 
+@font-face {
+
+      font-family: "Fairy";
+
+      src: url(https://Jabka123.github.io/4717.ttf);
+
+    }
+table { 
+font-family: "Fairy";  
+font-size: 14px; 
+border-collapse: collapse; 
+text-align: center; 
+table-layout: inherit; 
+} 
+
+th { 
+background: #AFCDE7; 
+color: white; 
+padding: 10px 20px; 
+width: 50px; 
+} 
+
+th, 
+td { 
+border-style: solid; 
+border-width: 0 1px 1px 0; 
+border-color: white; 
+} 
+
+td { 
+background: #D8E6F3; 
+text-align: left; 
+max-width: 100px; 
+min-width: 30px; 
+} 
+</style> 
+
+<script> 
+var c = 0 
+var l = 0 
+var m = 1 
+var temp1 = "" 
+var temp2 = "" 
+var temp3 = "" 
+sum1 = 0 
+sum2 = 0 
+flag = 0 
+
+function CreateTable() { 
+var x = document.createElement("TABLE"); 
+x.setAttribute("id", "myTable"); 
+document.body.appendChild(x); 
+} 
+
+function myFunction() { 
+if (flag == 1) { 
+document.getElementById("myTable").innerHTML = ""; 
+document.getElementById("myTableAnswers").innerHTML = ""; 
+} 
+example1 = 1 
+example2 = 1 
+if (flag == 0) { 
+CreateTable() 
+} 
+flag = 1 
+var b = Number(document.getElementById("in1").value); 
+for (var i = 1; i <= b; i++) { 
+temp1 = "Tr" + c 
+var x = document.createElement("TR"); 
+x.setAttribute("id", temp1); 
+document.getElementById("myTable").appendChild(x); 
+c++; 
+
+for (var j = 0; j < 1; j++) { 
+var y = document.createElement("TH"); 
+y.setAttribute("id", "myTH" + i); 
+t = document.createTextNode(i); 
+y.appendChild(t); 
+document.getElementById(temp1).appendChild(y); 
+} 
+for (j = 0; j < 1; j++) { 
+temp2 = "Td" + l 
+var z = document.createElement("TD"); 
+z.setAttribute("id", temp2); 
+t = document.createTextNode(example1); 
+z.appendChild(t); 
+sum1 += example1; 
+example1 = 1/(i+1); 
+
+document.getElementById(temp1).appendChild(z); 
+l += 2; 
+} 
+
+} 
+
+addanswer(); 
+document.getElementById("answ1").innerHTML = sum1 
+document.getElementById("answ2").innerHTML = sum2 
+sum1 = 0; 
+sum2 = 0; 
+} 
+
+
+function addanswer() { 
+var x = document.createElement("TABLE"); 
+x.setAttribute("id", "myTableAnswers"); 
+document.body.appendChild(x); 
+var y = document.createElement("TR"); 
+y.setAttribute("id", "tr_answer"); 
+document.getElementById("myTableAnswers").appendChild(y); 
+z = document.createElement("TH"); 
+z.setAttribute("id", "SUM"); 
+document.getElementById("tr_answer").appendChild(z); 
+t = document.createTextNode("SUM"); 
+z.appendChild(t); 
+z = document.createElement("TD"); 
+z.setAttribute("id", "answ1"); 
+document.getElementById("tr_answer").appendChild(z); 
+z = document.createElement("TD"); 
+} 
+</script> 
+</head> 
+
+<body> 
+
+<input type="text" value="7" id="in1"> 
+
+<button onclick="myFunction()">5.32</button> 
+</body> 
+
+</html>
